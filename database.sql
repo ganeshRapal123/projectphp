@@ -1,0 +1,11 @@
+CREATE DATABASE IF NOT EXISTS auth_system;
+
+USE auth_system;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(255) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    otp_code VARCHAR(6) NULL,
+    otp_expires_at DATETIME NULL
+);
